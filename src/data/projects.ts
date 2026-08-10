@@ -7,6 +7,7 @@ import owl from "../assets/projects/owl.png";
 import sara from "../assets/projects/sara.png";
 import grocify from "../assets/projects/grocify.png";
 import gojo from "../assets/projects/gojo.jpg";
+import lemon from "../assets/projects/lemon.png";
 import type { Project } from "../types";
 
 export const projectCategories = [
@@ -60,6 +61,27 @@ export const projects: Project[] = [
     featured: true,
     year: "2025",
     role: "Frontend Developer",
+  },
+  {
+    id: "lemon-ai",
+    title: "Lemon AI",
+    category: "Web Apps",
+    image: lemon,
+    size: "medium",
+    description: "AI Social Media Scheduling Platform.",
+    technologies: [
+      "Next.js",
+      "TailwindCSS",
+      "TypeScript",
+      "Inngest",
+      "Clerk",
+      "Insforge",
+    ],
+    github: "https://github.com/MikiZenebe/Lemon-AI",
+    liveDemo: "https://lemon-ai-miki.vercel.app/",
+    featured: true,
+    year: "2026",
+    role: "Fullstack Developer",
   },
   {
     id: "gojo-real-estate",
