@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="flex flex-col-reverse items-start justify-between gap-6 md:flex-row md:items-center">
           <p className="text-xs text-faint">
-            © {new Date().getFullYear()} Aarav Mehta. All rights reserved. ·{" "}
+            © {new Date().getFullYear()} Mikiyas Zenebe. All rights reserved. ·{" "}
             {contactInfo.email}
           </p>
 
