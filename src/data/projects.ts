@@ -8,6 +8,7 @@ import sara from "../assets/projects/sara.png";
 import grocify from "../assets/projects/grocify.png";
 import gojo from "../assets/projects/gojo.jpg";
 import lemon from "../assets/projects/lemon.png";
+import nexus from "../assets/projects/nexus.png";
 import type { Project } from "../types";
 
 export const projectCategories = [
@@ -124,6 +125,21 @@ export const projects: Project[] = [
     technologies: ["GSAP", "React", "Tailwind", "Framer Motion"],
     github: "https://github.com/MikiZenebe/Tribe-LandingPage",
     liveDemo: "https://tribe-miki-sass.vercel.app",
+    featured: true,
+    // year: "2023",
+    // role: "Creative Developer",
+  },
+  {
+    id: "nexus",
+    title: "Nexus-DeFi",
+    category: "Web 3.0",
+    image: nexus,
+    size: "large",
+    description:
+      "A decentralized finance (DeFi) platform for the Ethereum blockchain, built with Hardhat and React. NexusFi allows users to trade ERC-20 tokens, earn rewards, and participate in yield farming, all while maintaining full control of their assets through smart contracts.",
+    technologies: ["Solidity", "React", "Vite", "Tailwind"],
+    github: "https://github.com/MikiZenebe/NexusFi-DeFi",
+    liveDemo: "https://nexus-defi-block.vercel.app/",
     featured: true,
     // year: "2023",
     // role: "Creative Developer",
