@@ -15,6 +15,9 @@ import {
   SiVuedotjs,
   SiExpress,
   SiSupabase,
+  SiWeb3Dotjs,
+  SiSolidity,
+  SiEthereum,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import type { Skill } from "../types";
@@ -25,6 +28,7 @@ export const skillCategories = [
   "Backend",
   "Animation",
   "Tools",
+  "Web3",
 ] as const;
 
 export const skills: Skill[] = [
@@ -82,4 +86,7 @@ export const skills: Skill[] = [
   { name: "Figma", icon: SiFigma, category: "Tools", color: "#F24E1E" },
   { name: "VS Code", icon: VscVscode, category: "Tools", color: "#007ACC" },
   { name: "Vite", icon: SiVite, category: "Tools", color: "#646CFF" },
+  { name: "Web3.js", icon: SiWeb3Dotjs, category: "Web3", color: "#F16822" },
+  { name: "Solidity", icon: SiSolidity, category: "Web3", color: "#363636" },
+  { name: "Ethereum", icon: SiEthereum, category: "Web3", color: "#3C3C3D" },
 ];

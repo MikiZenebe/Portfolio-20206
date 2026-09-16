@@ -16,7 +16,7 @@ export const projectCategories = [
   "Web Apps",
   "Mobile Apps",
   "Landing Pages",
-  "Backend",
+  "Web3/Blockchain",
 ] as const;
 
 export const projects: Project[] = [
@@ -132,7 +132,7 @@ export const projects: Project[] = [
   {
     id: "nexus",
     title: "Nexus-DeFi",
-    category: "Web 3.0",
+    category: "Web3/Blockchain",
     image: nexus,
     size: "large",
     description:
