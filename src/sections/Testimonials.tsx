@@ -52,7 +52,7 @@ export default function Testimonials() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="flex flex-col items-center gap-8"
               >
-                <p className="font-display text-balance text-2xl leading-snug text-ink md:text-3xl break-words">
+                <p className="font-display text-justify text-xl leading-snug text-ink md:text-xl break-words">
                   “{current.quote}”
                 </p>
                 <div className="flex items-center gap-4">

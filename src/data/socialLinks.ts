@@ -29,7 +29,7 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const contactInfo: ContactInfo = {
-  email: "mickyaszenebe@gmail.com",
+  email: "dev.mikiyaszenebe@gmail.com",
   phone: "+251922936393",
   location: "Addis Ababa, Ethiopia — Available Worldwide",
 };
