@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mikiyas Zenebe — Frontend Developer</title>
+
+</head>
+<body>
+<div class="wrap">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Mulish:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .wrap { box-shadow: none; }
+  }
+
+  body {
+    background: #d6d3cc;
+    padding: 36px 20px;
+    font-family: 'Mulish', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.18);
+    min-height: 1060px;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    background: #0f1923;
+    color: #e8e4da;
+    padding: 52px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .avatar-block { text-align: center; }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #1d9e75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #e1f5ee;
+    margin: 0 auto 18px;
+    letter-spacing: -1px;
+  }
+
+  .sidebar-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .sidebar-role {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #1d9e75;
+  }
+
+  .s-section { }
+
+  .s-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1d9e75;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1d2e26;
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-list li {
+    font-size: 12px;
+    color: #a8a49a;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .contact-list li strong {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b6860;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+
+  .contact-list a {
+    color: #a8a49a;
+    text-decoration: none;
+  }
+
+  .contact-list a:hover { color: #1d9e75; }
+
+  .skill-group { margin-bottom: 16px; }
+
+  .skill-group-name {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b6860;
+    margin-bottom: 8px;
+  }
+
+  .skill-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .bubble {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9fe1cb;
+    background: #0d2820;
+    border: 1px solid #1d4535;
+    padding: 3px 9px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+  }
+
+  /* MAIN */
+  .main {
+    background: #faf8f4;
+    padding: 52px 44px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .m-section { }
+
+  .m-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #888780;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .m-heading::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #1d9e75;
+    flex-shrink: 0;
+  }
+
+  .job { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid #e8e4da; }
+  .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 3px;
+  }
+
+  .job-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a18;
+    letter-spacing: -0.3px;
+  }
+
+  .job-date {
+    font-size: 11px;
+    color: #888780;
+    white-space: nowrap;
+    font-weight: 600;
+    padding-top: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  .job-co {
+    font-size: 12.5px;
+    color: #1d9e75;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .job-co span {
+    color: #b4b2a9;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .job-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .stag {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #0f6e56;
+    background: #e1f5ee;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  .job-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .job-bullets li {
+    font-size: 13px;
+    color: #5f5e5a;
+    line-height: 1.65;
+    padding-left: 16px;
+    position: relative;
+    font-weight: 300;
+  }
+
+  .job-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 1.5px;
+    background: #1d9e75;
+  }
+
+  .edu-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .edu-school {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a18;
+    margin-bottom: 4px;
+  }
+
+  .edu-deg {
+    font-size: 13px;
+    color: #888780;
+    font-weight: 300;
+  }
+
+  .edu-year {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d9e75;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+</style>
+
+  <aside class="sidebar">
+    <div class="avatar-block">
+    
+      <p class="sidebar-name">Mikiyas Zenebe</p>
+      <p class="sidebar-role">Senior Frontend Developer</p>
+    </div>
+
+    <div class="s-section">
+      <p class="s-heading">Contact</p>
+      <ul class="contact-list">
+        <li>
+          <strong>Location</strong>
+          Addis Ababa, Ethiopia
+        </li>
+        <li>
+          <strong>Phone</strong>
+          <a href="tel:+251922936393">+251 922 936 393</a>
+        </li>
+        <li>
+          <strong>Email</strong>
+          <a href="mailto:dev.mikiyaszenebe@gmail.com">dev.mikiyaszenebe@gmail.com</a>
+        </li>
+        <li>
+          <strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/mikiyas-zenebe-17451b222" target="_blank">linkedin.com/in/mikiyas</a>
+        </li>
+        <li>
+          <strong>GitHub</strong>
+          <a href="https://github.com/MikiZenebe" target="_blank">github.com/mikiyas</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="s-section">
+      <p class="s-heading">Skills</p>
+
+      <div class="skill-group">
+        <p class="skill-group-name">Frontend</p>
+        <div class="skill-bubbles">
+          <span class="bubble">React</span>
+          <span class="bubble">Next.js</span>
+          <span class="bubble">TypeScript</span>
+          <span class="bubble">Vue</span>
+          <span class="bubble">React Native</span>
+          <span class="bubble">Tailwind</span>
+          <span class="bubble">MUI</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-name">Backend</p>
+        <div class="skill-bubbles">
+          <span class="bubble">Node.js</span>
+          <span class="bubble">Firebase</span>
+          <span class="bubble">Supabase</span>
+          <span class="bubble">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-name">Tooling</p>
+        <div class="skill-bubbles">
+          <span class="bubble">Git</span>
+          <span class="bubble">RTK Query</span>
+          <span class="bubble">Jest</span>
+          <span class="bubble">Webpack</span>
+          <span class="bubble">Agile</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="s-section">
+      <p class="s-heading">Education</p>
+      <p style="font-size:13px; color:#e8e4da; font-weight:600; margin-bottom:4px;">Unity University</p>
+      <p style="font-size:11.5px; color:#6b6860; font-weight:400; line-height:1.5;">B.Sc. Computer Science</p>
+      <p style="font-size:11px; color:#1d9e75; font-weight:600; margin-top:4px;">2023</p>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="m-section">
+      <p class="m-heading">Experience</p>
+
+      <div class="job">
+        <div class="job-header">
+          <p class="job-title">Senior Frontend Developer</p>
+          <p class="job-date">Feb 2026 – Present</p>
+        </div>
+        <p class="job-co">Efoy Plus - Integrated Solutions <span>· On-site</span></p>
+        <div class="job-stack">
+          <span class="stag">Next.js</span>
+          <span class="stag">React.js</span>
+          <span class="stag">TanStack Query</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Leading frontend development of a multi-tenant SaaS product, architecting scalable module structures that support rapid feature delivery across client accounts.</li>
+          <li>Built and maintained a shared component library used across the platform, improving development speed and ensuring consistent UX across all SaaS modules.</li>
+          <li>Leveraged TanStack Query for efficient server-state management, reducing redundant API calls and improving perceived performance for end users.</li>
+          <li>Collaborated with product and design teams to translate complex business workflows into intuitive, accessible interfaces tailored for enterprise clients.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <p class="job-title">Frontend Developer</p>
+          <p class="job-date">Nov 2024 – Feb 2026</p>
+        </div>
+        <p class="job-co">Awura-Tech <span>· On-site</span></p>
+        <div class="job-stack">
+          <span class="stag">TypeScript</span>
+          <span class="stag">RTK Query</span>
+          <span class="stag">Shadcn</span>
+          <span class="stag">Jest</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Contributed to large-scale enterprise web applications with complex UI workflows, serving thousands of users.</li>
+          <li>Built robust, reusable, and performant React + TypeScript components with Tailwind CSS, ensuring cross-feature consistency.</li>
+          <li>Partnered closely with product managers, designers, and backend engineers to ship user-centric features aligned to business goals.</li>
+          <li>Architected advanced state management and data-fetching using Redux Toolkit, RTK Query, and React Context API.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <p class="job-title">Frontend Developer</p>
+          <p class="job-date">Sep 2024 – Aug 2025</p>
+        </div>
+        <p class="job-co">ELFE-Digital <span>· Remote</span></p>
+        <div class="job-stack">
+          <span class="stag">JavaScript</span>
+          <span class="stag">Firebase</span>
+          <span class="stag">Tailwind CSS</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Built a modern event and award management platform enabling users to handle tickets, schedules, and awards with an intuitive UI.</li>
+          <li>Developed scalable, accessible components using React, Redux Toolkit, and Tailwind CSS.</li>
+          <li>Collaborated with backend developers to wire UI components to RESTful APIs for seamless data flow.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <p class="job-title">Frontend Developer</p>
+          <p class="job-date">May 2023 – Jul 2024</p>
+        </div>
+        <p class="job-co">Arif-Studios <span>· Remote</span></p>
+        <div class="job-stack">
+          <span class="stag">JavaScript</span>
+          <span class="stag">Axios</span>
+          <span class="stag">Tailwind CSS</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Developed an event booking platform enabling users to manage bookings, tickets, and schedules through a clean interface.</li>
+          <li>Implemented scalable, responsive components using React, Redux Toolkit, and Tailwind CSS.</li>
+          <li>Ensured seamless RESTful API integration in collaboration with backend developers.</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
