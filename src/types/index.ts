@@ -31,6 +31,13 @@ export interface Project {
   featured: boolean;
   year?: string;
   role?: string;
+  contractAddress?: string;
+  network?: string;
+  explorerUrl?: string;
+  contractStandard?: string;
+  compiler?: string;
+  verified?: boolean;
+  keyMethods?: string[];
 }
 
 export interface ExperienceItem {

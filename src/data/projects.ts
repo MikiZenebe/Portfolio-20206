@@ -1,7 +1,6 @@
 import gojoRealEstate from "../assets/projects/gojo-realstate.png";
 import arif from "../assets/projects/arif.png";
 import nebeVoter from "../assets/projects/nebe-voter.png";
-import tribe from "../assets/projects/tribe.png";
 import mobileBanner from "../assets/projects/mobileBanner.png";
 import owl from "../assets/projects/owl.png";
 import sara from "../assets/projects/sara.png";
@@ -9,14 +8,15 @@ import grocify from "../assets/projects/grocify.png";
 import gojo from "../assets/projects/gojo.jpg";
 import lemon from "../assets/projects/lemon.png";
 import nexus from "../assets/projects/nexus.png";
+import crowdsprout from "../assets/projects/crowdsprout.jpg";
 import type { Project } from "../types";
 
 export const projectCategories = [
   "All",
   "Web Apps",
   "Mobile Apps",
-  "Landing Pages",
   "Web3/Blockchain",
+  "Deployed Contracts",
 ] as const;
 
 export const projects: Project[] = [
@@ -115,21 +115,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: "tribe",
-    title: "Tribe",
-    category: "Landing Pages",
-    image: tribe,
-    size: "small",
-    description:
-      "A responsive portfolio website showcasing modern web development techniques with smooth animations and interactive elements.",
-    technologies: ["GSAP", "React", "Tailwind", "Framer Motion"],
-    github: "https://github.com/MikiZenebe/Tribe-LandingPage",
-    liveDemo: "https://tribe-miki-sass.vercel.app",
-    featured: true,
-    // year: "2023",
-    // role: "Creative Developer",
-  },
-  {
     id: "nexus",
     title: "Nexus-DeFi",
     category: "Web3/Blockchain",
@@ -207,5 +192,41 @@ export const projects: Project[] = [
     featured: true,
     // year: "2023",
     // role: "Mobile App Developer",
+  },
+
+  {
+    id: "crowd-sprout-contract",
+    title: "CrowdSprout Campaign Protocol",
+    category: "Deployed Contracts",
+    image: crowdsprout,
+    size: "large",
+    description:
+      "Production Ethereum smart contract governing multi-milestone campaign fundraising, automatic escrow lockups, and backer refund guarantees. Fully verified on Etherscan Sepolia.",
+    technologies: [
+      "Solidity",
+      "Hardhat",
+      "Sepolia",
+      "Ethers.js",
+      "OpenZeppelin",
+    ],
+    github: "https://github.com/MikiZenebe/Crowd-Sprout/tree/main/web3",
+    liveDemo:
+      "https://sepolia.etherscan.io/address/0xB09E98eb5b209f162382e359d7cA5C16bb4099D9#code",
+    contractAddress: "0xB09E98eb5b209f162382e359d7cA5C16bb4099D9",
+    network: "Sepolia Testnet",
+    explorerUrl:
+      "https://sepolia.etherscan.io/address/0xB09E98eb5b209f162382e359d7cA5C16bb4099D9#code",
+    contractStandard: "Crowdfunding & Escrow",
+    compiler: "Solidity 0.8.34",
+    verified: true,
+    keyMethods: [
+      "createCampaign()",
+      "donateToCampaign()",
+      "getCampaigns()",
+      "claimRefund()",
+    ],
+    featured: true,
+    year: "2026",
+    role: "Smart Contract Engineer",
   },
 ];
