@@ -19,8 +19,8 @@ export default function Skills() {
         <SectionHeading
           index="02"
           eyebrow="Skills"
-          title="Tools I reach for, on web and on mobile."
-          description="A working kit refined over years of shipping — from browser to App Store, nothing trendy for the sake of it, everything earning its place."
+          title="Tools I reach for, on web, mobile, and web3."
+          description="A working kit refined over years of shipping — from browser to App Store and smart contracts, nothing trendy for the sake of it, everything earning its place."
         />
 
         <div className="mb-12 flex flex-wrap gap-3">

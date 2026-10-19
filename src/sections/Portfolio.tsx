@@ -86,7 +86,7 @@ export default function Portfolio() {
           index="03"
           eyebrow="Selected Work"
           title="A handful of projects worth talking about."
-          description="From web to native mobile apps — each one solved a real constraint, technical, business or human. Filter by type or swipe through the carousel."
+          description="From web & mobile apps to verified smart contracts on EVM chains — each one solved a real constraint, technical, business or human. Filter by type or swipe through the carousel."
         />
 
         {/* Filter buttons */}

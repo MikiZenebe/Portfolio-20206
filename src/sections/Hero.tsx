@@ -150,13 +150,13 @@ export default function Hero() {
               >
                 Start a Project
               </MagneticButton>
-              <MagneticButton
+              {/* <MagneticButton
                 as="button"
                 variant="outline"
                 onClick={() => setIsResumeOpen(true)}
               >
                 Resume <FileText className="h-4 w-4" />
-              </MagneticButton>
+              </MagneticButton> */}
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import gojo from "../assets/projects/gojo.jpg";
 import lemon from "../assets/projects/lemon.png";
 import nexus from "../assets/projects/nexus.png";
 import crowdsprout from "../assets/projects/crowdsprout.jpg";
+import crowdSproutWeb from "../assets/projects/crowdSprout.png";
 import type { Project } from "../types";
 
 export const projectCategories = [
@@ -128,6 +129,28 @@ export const projects: Project[] = [
     featured: true,
     // year: "2023",
     // role: "Creative Developer",
+  },
+  {
+    id: "crowd-sprout-web",
+    title: "CrowdSprout Funding Dapp",
+    category: "Web3/Blockchain",
+    image: crowdSproutWeb,
+    size: "large",
+    description:
+      "A decentralized crowdfunding platform built with React.js and Solidity. CrowdSprout allows users to create and donate to campaigns, all while maintaining full control of their assets through smart contracts.",
+    technologies: [
+      "React",
+      "Solidity",
+      "Tailwind",
+      "Hardhat",
+      "Pinata",
+      "Hono",
+    ],
+    github: "https://github.com/MikiZenebe/Crowd-Sprout",
+    liveDemo: "https://crowd-sprouts.vercel.app/",
+    featured: true,
+    year: "2026",
+    // role: "Fullstack Engineer",
   },
   {
     id: "book-ocean",

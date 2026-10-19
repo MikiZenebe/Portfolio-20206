@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
 import TiltCard from "./TiltCard";
 import Tag from "./Tag";
+import ContractCard from "./ContractCard";
 import type { Project } from "../types";
 
 interface ProjectCardProps {
@@ -12,7 +13,14 @@ interface ProjectCardProps {
   className?: string;
 }
 
-export default function ProjectCard({ project, onOpen, className = "" }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  onOpen,
+  className = "",
+}: ProjectCardProps) {
+  // if (project.category === "Deployed Contracts" || Boolean(project.contractAddress)) {
+  //   return <ContractCard project={project} onOpen={onOpen} className={className} />;
+  // }
   return (
     <motion.div
       layout
@@ -45,7 +53,9 @@ export default function ProjectCard({ project, onOpen, className = "" }: Project
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              onClick={(e: MouseEvent<HTMLAnchorElement>) => e.stopPropagation()}
+              onClick={(e: MouseEvent<HTMLAnchorElement>) =>
+                e.stopPropagation()
+              }
               aria-label={`${project.title} GitHub repository`}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-black/70 border border-white/10 backdrop-blur text-white hover:bg-accent transition-colors"
             >
@@ -55,7 +65,9 @@ export default function ProjectCard({ project, onOpen, className = "" }: Project
               href={project.liveDemo}
               target="_blank"
               rel="noreferrer"
-              onClick={(e: MouseEvent<HTMLAnchorElement>) => e.stopPropagation()}
+              onClick={(e: MouseEvent<HTMLAnchorElement>) =>
+                e.stopPropagation()
+              }
               aria-label={`${project.title} live demo`}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-black/70 border border-white/10 backdrop-blur text-white hover:bg-accent transition-colors"
             >
@@ -66,14 +78,25 @@ export default function ProjectCard({ project, onOpen, className = "" }: Project
           <div className="absolute bottom-0 left-0 right-0 p-6">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.2em] text-accent mb-2">{project.category}</p>
-                <h3 className="font-display text-2xl md:text-3xl text-white leading-tight">{project.title}</h3>
+                <p className="text-[11px] uppercase tracking-[0.2em] text-accent mb-2">
+                  {project.category}
+                </p>
+                <h3 className="font-display text-2xl md:text-3xl text-white leading-tight">
+                  {project.title}
+                </h3>
               </div>
-              <span className="num-label text-xs text-white/50 shrink-0">{project.year}</span>
+              <span className="num-label text-xs text-white/50 shrink-0">
+                {project.year}
+              </span>
             </div>
             <div className="mt-4 flex flex-wrap gap-2 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 overflow-hidden">
               {project.technologies.slice(0, 3).map((tech) => (
-                <Tag key={tech} className="border-white/20 text-white/80 bg-black/30">{tech}</Tag>
+                <Tag
+                  key={tech}
+                  className="border-white/20 text-white/80 bg-black/30"
+                >
+                  {tech}
+                </Tag>
               ))}
             </div>
           </div>
