@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, type MouseEvent } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowDown, ArrowUpRight, FileText } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import MagneticButton from "../components/MagneticButton";
 import { scrollToId } from "../hooks/useLenis";

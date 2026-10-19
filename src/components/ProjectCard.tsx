@@ -4,7 +4,6 @@ import { ArrowUpRight } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
 import TiltCard from "./TiltCard";
 import Tag from "./Tag";
-import ContractCard from "./ContractCard";
 import type { Project } from "../types";
 
 interface ProjectCardProps {
